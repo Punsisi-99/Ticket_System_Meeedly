@@ -34,9 +34,11 @@ The application is built using reusable React components so that the UI remains 
 
 ### 2. Centralized Ticket State
 Ticket data is managed in React state and passed through components in a predictable way. This keeps the project simple while remaining ready for future API integration.
+<img width="1366" height="768" alt="Screenshot (777)" src="https://github.com/user-attachments/assets/183578c9-c7a4-4f31-9413-576c7cfccc4f" />
 
 ### 3. Dashboard-Centered Workflow
 Instead of forcing users to move through many disconnected screens, the design focuses on a management-friendly dashboard workflow for faster ticket handling.
+<img width="1335" height="630" alt="image" src="https://github.com/user-attachments/assets/fb0349d7-11d7-420a-a636-cd9a4754f13b" />
 
 ### 4. Future Backend Readiness
 The ticket structure is designed in a way that can later be connected to a real backend, database, authentication system, and role-based access control.
