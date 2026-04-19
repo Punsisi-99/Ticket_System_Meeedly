@@ -1,16 +1,80 @@
-# React + Vite
+# Smart Support Ticket System Made from Noplin UIs by Meeedly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A scalable React-based Software Support Ticket System built for the Meeedly Software Engineering Internship Assignment. This project is designed for an enterprise SaaS support workflow, with emphasis on clean architecture, maintainability, and scalability.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This application simulates an internal support ticketing system for a global enterprise SaaS platform. It allows users to create support tickets, helps support teams manage them from a dashboard, and supports conversation-based replies for issue handling.
 
-## React Compiler
+The project was built with a strong focus on:
+- scalable component design
+- reusable UI structure
+- practical ticket workflows
+- clean state handling without external state libraries
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This assignment required a system that supports ticket creation, ticket viewing with responses, and a management dashboard, while also demonstrating real-world engineering thinking beyond basic CRUD. 
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Create a support ticket with:
+  - Title
+  - Description
+  - Ticket priotization
+- View all tickets in a centralized dashboard
+- Organize tickets by support-related attributes such as status, priority, or category
+- View ticket conversations
+- Add support responses
+- Manage ticket workflows from a single interface
+- UI designed for multi-organization SaaS usage
+
+## Architecture Decisions
+
+### 1. Component-Based Design
+The application is built using reusable React components so that the UI remains modular and maintainable as the project grows.
+
+### 2. Centralized Ticket State
+Ticket data is managed in React state and passed through components in a predictable way. This keeps the project simple while remaining ready for future API integration.
+
+### 3. Dashboard-Centered Workflow
+Instead of forcing users to move through many disconnected screens, the design focuses on a management-friendly dashboard workflow for faster ticket handling.
+
+### 4. Future Backend Readiness
+The ticket structure is designed in a way that can later be connected to a real backend, database, authentication system, and role-based access control.
+
+## Scalability Considerations
+
+This project was designed with scalability in mind, as required in the assignment. 
+
+Key considerations include:
+- reusable components to reduce duplication
+- structured ticket objects for easier backend mapping
+- separation of ticket creation, listing, and response logic
+- dashboard workflow that can scale for larger support teams
+- code organization that supports future pagination, search, filtering, and API integration
+- no external state libraries, keeping the solution lightweight and controlled
+
+## Tech Stack
+
+- React `^19.2.4`
+- React DOM `^19.2.4`
+- Vite `^8.0.1`
+
+From the project configuration, the available scripts are development, build, lint, and preview commands. 
+
+## Project Structure
+
+Example structure:
+
+```text
+src/
+├── components/
+│   ├── common/
+│   ├── dashboard/
+│   └── tickets/
+├── pages/
+│   ├── TicketCreatePage.jsx
+│   └── DashboardPage.jsx
+├── data/
+├── utils/
+├── App.jsx
+└── main.jsx
